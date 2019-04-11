@@ -100,7 +100,7 @@ def hihi():
 	db.close()
 	
 	
-[17:26, 2019年4月11日] Phoebe 피비💗💙: @app.route("/comment", methods =["POST"])
+@app.route("/comment", methods =["POST"])
 def comment():
 	if request.method == 'POST':
 		name = request.form["name"]
@@ -144,6 +144,55 @@ def comment3():
 		cursor.execute(sql)
 		db.commit()
 	return render_template("tester.html")
+
+
+@app.route("/showcom")
+def showcom():
+	nme=[]
+	info=[]
+
+
+	cursor = db.cursor()
+	sql = ("SELECT commentName, commentInfo FROM comment")
+	cursor.execute(sql)
+	results = cursor.fetchall()
+	for row in results:
+		nme.append(row[0])
+		info.append(row[1])
+
+	return render_template('tester.html',name = nme , Info = info)
+
+@app.route("/showcom2")
+def showcom():
+	nme=[]
+	info=[]
+
+
+	cursor = db.cursor()
+	sql = ("SELECT commentName, commentInfo FROM comment")
+	cursor.execute(sql)
+	results = cursor.fetchall()
+	for row in results:
+		nme.append(row[0])
+		info.append(row[1])
+
+	return render_template('tester.html',name = nme , Info = info)
+
+@app.route("/showcom3")
+def showcom():
+	nme=[]
+	info=[]
+
+
+	cursor = db.cursor()
+	sql = ("SELECT commentName, commentInfo FROM comment")
+	cursor.execute(sql)
+	results = cursor.fetchall()
+	for row in results:
+		nme.append(row[0])
+		info.append(row[1])
+
+	return render_template('tester.html',name = nme , Info = info)
 
 @app.route("/tester")
 def tester():

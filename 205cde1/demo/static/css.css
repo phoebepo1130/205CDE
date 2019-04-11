@@ -166,13 +166,21 @@ ul {
   font-weight: 400;
 }
  
+.video:hover{
+	
+	transform:scale(1.3);
+}
+
+.video{
+	transition: transform.2s;
+}
 
 .column {
   float: left;
   width: 30%;
 }
 
-/* Clear floats */
+
 .row:after {
   content: "";
   display: table;

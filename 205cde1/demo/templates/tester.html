@@ -59,6 +59,23 @@
     </div> 
     </div>
     </form>
+   <input type="button" onclick="window.location.href='{{url_for('showcom')}}'" value="Show Comment">
+    <table class="table" id="showcom">
+    <thead>
+      <tr id="showcom">
+        <th id ="commentName">Name</th>
+        <th id ="commentInfo">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for n in range(name|length)%}
+      <tr>
+        <td>{{name[n]}}</td>
+        <td>{{Info[n]}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    </table>
  </div>
   <div class="column">
   <p>One More Chance music video</p>
@@ -85,6 +102,23 @@
     </div> 
     </div>
     </form>
+   <input type="button" onclick="window.location.href='{{url_for('showcom')}}'" value="Show Comment">
+    <table class="table" id="showcom">
+    <thead>
+      <tr id="showcom">
+        <th id ="commentName">Name</th>
+        <th id ="commentInfo">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for n in range(name|length)%}
+      <tr>
+        <td>{{name[n]}}</td>
+        <td>{{Info[n]}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    </table>
   </div>
   <div class="column">
   <p>One More Time music video</p>
@@ -111,6 +145,23 @@
     </div> 
     </div>
     </form>
+   <input type="button" onclick="window.location.href='{{url_for('showcom')}}'" value="Show Comment">
+    <table class="table" id="showcom">
+    <thead>
+      <tr id="showcom">
+        <th id ="commentName">Name</th>
+        <th id ="commentInfo">Details</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for n in range(name|length)%}
+      <tr>
+        <td>{{name[n]}}</td>
+        <td>{{Info[n]}}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+    </table>
   </div>
 </div> 
 

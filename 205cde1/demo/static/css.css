@@ -189,6 +189,15 @@ ul {
 }
 
 
+.pic:hover{
+	
+	transform:scale(1.3);
+}
+
+.pic{
+	transition: transform.2s;
+}
+
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 900px) {
   .column {

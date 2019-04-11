@@ -98,6 +98,52 @@ def hihi():
 	return render_template("hihi.html",error = error)
 
 	db.close()
+	
+	
+[17:26, 2019年4月11日] Phoebe 피비💗💙: @app.route("/comment", methods =["POST"])
+def comment():
+	if request.method == 'POST':
+		name = request.form["name"]
+		email = request.form["email"]
+		commentInfo = request.form["commentInfo"]
+
+		cursor =db.cursor()
+
+		sql = """INSERT INTO comment (commentName, commentEmail, commentInfo) VALUES ('%s', '%s', '%s')"""%(str(name), str(name), str(commentInfo))
+		cursor.execute(sql)
+		db.commit()
+	return render_template("tester.html")
+
+
+
+@app.route("/comment2", methods =["POST"])
+def comment2():
+	if request.method == 'POST':
+		name = request.form["name"]
+		email = request.form["email"]
+		commentInfo = request.form["commentInfo"]
+
+		cursor =db.cursor()
+
+		sql = """INSERT INTO comment2 (commentName, commentEmail, commentInfo) VALUES ('%s', '%s', '%s')"""%(str(name), str(name), str(commentInfo))
+		cursor.execute(sql)
+		db.commit()
+	return render_template("tester.html")
+
+
+@app.route("/comment3", methods =["POST"])
+def comment3():
+	if request.method == 'POST':
+		name = request.form["name"]
+		email = request.form["email"]
+		commentInfo = request.form["commentInfo"]
+
+		cursor =db.cursor()
+
+		sql = """INSERT INTO comment3 (commentName, commentEmail, commentInfo) VALUES ('%s', '%s', '%s')"""%(str(name), str(name), str(commentInfo))
+		cursor.execute(sql)
+		db.commit()
+	return render_template("tester.html")
 
 @app.route("/tester")
 def tester():
